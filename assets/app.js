@@ -37,6 +37,32 @@ async function load(name) {
   return r.json();
 }
 
+/* sumário no topo + seção atual destacada na barra */
+function setupNav() {
+  const secs = [...document.querySelectorAll('section[id]')];
+  const toc = $('#toc');
+  if (toc) toc.innerHTML = '<h2 class="toc-t">Neste guia</h2><ol>' + secs.map(s => {
+    const n = s.querySelector('.head .num')?.textContent || '', e = s.querySelector('.eyebrow')?.textContent || '', h = s.querySelector('h2')?.textContent || '';
+    return `<li><a href="#${s.id}"><span class="tn">${esc(n)}</span><span class="te">${esc(e)}</span><span class="th">${esc(h)}</span></a></li>`;
+  }).join('') + '</ol>';
+  const bar = document.querySelector('nav.top .wrap');
+  const links = new Map([...bar.querySelectorAll('a[href^="#"]')].map(a => [a.getAttribute('href').slice(1), a]));
+  const edge = () => bar.classList.toggle('more', bar.scrollLeft + bar.clientWidth < bar.scrollWidth - 4);
+  bar.addEventListener('scroll', edge, { passive: true }); addEventListener('resize', edge); edge();
+  let cur = null;
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting || cur === en.target.id) return;
+    cur = en.target.id;
+    links.forEach((a, id) => id === cur ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'));
+    const a = links.get(cur);
+    if (a) bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: reduced() ? 'auto' : 'smooth' });
+  }), { rootMargin: '-40% 0px -55% 0px' });
+  secs.forEach(s => io.observe(s));
+  /* no topo, nenhuma seção marcada */
+  addEventListener('scroll', () => { if (scrollY < 200 && cur) { cur = null; links.forEach(a => a.removeAttribute('aria-current')); } }, { passive: true });
+}
+setupNav();
+
 async function main() {
   const [vids, bench, content] = await Promise.all([load('videos'), load('benchmarks'), load('content')]);
   const V = vids.videos, BENCH = bench.perfis;
@@ -56,7 +82,7 @@ async function main() {
       return `<button class="step" data-k="${k}" aria-pressed="${filt === k}">
         <span class="n">${g.n === 'Porta' ? 'Antes do degrau 1' : 'Degrau ' + g.n}</span>
         <strong>${g.name}</strong><em>${esc(g.feel)}</em>
-        <span style="font-size:13px">${esc(g.fmt)}</span><span class="sig">Sinal: ${esc(g.sig)}</span></button>`;
+        <span style="font-size:13px">${esc(g.fmt)}</span><span class="sig">Sinal: ${esc(g.sig)}</span><span class="go">${filt === k ? 'Mostrando na galeria · tirar filtro' : 'Ver os vídeos ↓'}</span></button>`;
     }).join('');
     $('#ladder').querySelectorAll('.step').forEach(b => b.onclick = () => {
       setFilter(filt === b.dataset.k ? 'all' : b.dataset.k);
@@ -76,7 +102,7 @@ async function main() {
       by === 'views' ? (b.views || 0) - (a.views || 0)
       : by === 'deg' ? ORDER.indexOf(a.deg) - ORDER.indexOf(b.deg)
       : (rate(b) ?? -1) - (rate(a) ?? -1));
-    $('#count').textContent = list.length + ' vídeos';
+    $('#count').textContent = list.length + ' vídeos' + (filt === 'all' ? '' : ' em ' + DEG[filt].name);
     $('#gallery').innerHTML = list.length ? list.map((v, i) => {
       const r = rate(v), emb = embedUrl(v), net = v.plat.replace(' Shorts', '');
       return `<article class="card${v.deg === 'anti' ? ' anti' : ''}" data-i="${V.indexOf(v)}">
@@ -110,7 +136,7 @@ async function main() {
   let key = 'ratio', dir = -1;
   function drawBench() {
     $('#bench thead').innerHTML = '<tr>' + cols.map(([k, n]) =>
-      `<th aria-sort="${key === k ? (dir < 0 ? 'descending' : 'ascending') : 'none'}"><button data-k="${k}">${n}${key === k ? (dir < 0 ? ' ↓' : ' ↑') : ''}</button></th>`).join('') + '</tr>';
+      `<th aria-sort="${key === k ? (dir < 0 ? 'descending' : 'ascending') : 'none'}"><button data-k="${k}">${n}${key === k ? (dir < 0 ? ' ↓' : ' ↑') : '<span class="sorth" aria-hidden="true"> ↕</span>'}</button></th>`).join('') + '</tr>';
     const mx = Math.max(...BENCH.map(b => b.ratio || 0));
     const rows = BENCH.slice().sort((a, b) => {
       const x = a[key], y = b[key];
