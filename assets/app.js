@@ -19,7 +19,7 @@ function toast(t) {
 }
 async function copy(text) {
   try { await navigator.clipboard.writeText(text); toast('Copiado'); }
-  catch (e) { toast('Não foi possível copiar. Selecione o texto manualmente'); }
+  catch (e) { toast('Não deu para copiar. Selecione o texto e copie à mão'); }
 }
 
 /** URL do player oficial de cada rede, ou null quando a rede não tem embed simples (X). */
