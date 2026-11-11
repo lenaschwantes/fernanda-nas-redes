@@ -1,0 +1,70 @@
+{
+  "atualizado_em": "2026-11-11",
+  "perfis": [
+    {
+      "me": 1,
+      "who": "Fernanda",
+      "rede": "TikTok",
+      "seg": 286200,
+      "med": 2900,
+      "tot": 1900,
+      "deg": "Diagnóstico",
+      "lic": "Base engajada, formato que não entrega"
+    },
+    {
+      "me": 1,
+      "who": "Fernanda",
+      "rede": "Instagram",
+      "seg": 840100,
+      "med": 52400,
+      "tot": null,
+      "deg": "Diagnóstico",
+      "lic": "Fala dela conversa 9x mais que print"
+    },
+    {
+      "who": "Ana Elisa",
+      "rede": "TikTok",
+      "seg": 1700000,
+      "med": 545200,
+      "tot": 103,
+      "deg": "Conversar",
+      "lic": "Reage com o rosto, posta menos, conversa longo"
+    },
+    {
+      "who": "André Janones",
+      "rede": "TikTok",
+      "seg": 2500000,
+      "med": 817500,
+      "tot": 564,
+      "deg": "Participar",
+      "lic": "Pauta concreta, urgência e o seguidor com um papel"
+    },
+    {
+      "who": "André Janones",
+      "rede": "Instagram",
+      "seg": 10100000,
+      "med": 9200000,
+      "tot": null,
+      "deg": "Participar",
+      "lic": "Identidade de grupo: o \"Exército do Lula\""
+    },
+    {
+      "who": "Luide",
+      "rede": "YouTube",
+      "seg": 459000,
+      "med": null,
+      "tot": 1482,
+      "deg": "Conhecer",
+      "lic": "A política dentro da vida, Shorts de 10 a 60s"
+    },
+    {
+      "who": "Guilherme Cortez",
+      "rede": "X",
+      "seg": 318100,
+      "med": null,
+      "tot": null,
+      "deg": "Participar",
+      "lic": "Tom da timeline, humor, futuro, deixa a internet brincar"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "degraus": {
+    "entrada": {
+      "n": "Porta",
+      "name": "Porta de entrada",
+      "feel": "\"Quem é essa mulher enfrentando ele?\"",
+      "fmt": "Corte do confronto com nome conhecido",
+      "sig": "Alcance e seguidores novos"
+    },
+    "conhecer": {
+      "n": "01",
+      "name": "Conhecer",
+      "feel": "\"Ela é gente como eu\"",
+      "fmt": "Política dentro da vida, bastidor",
+      "sig": "Alcance fora da base"
+    },
+    "confiar": {
+      "n": "02",
+      "name": "Confiar",
+      "feel": "\"Ela faz o que diz\"",
+      "fmt": "Conquista contada como história",
+      "sig": "Salvamentos e compartilhamentos"
+    },
+    "conversar": {
+      "n": "03",
+      "name": "Conversar",
+      "feel": "\"Ela me ouve\"",
+      "fmt": "Resposta a comentário, react com rosto",
+      "sig": "3+ comentários a cada 100 plays"
+    },
+    "participar": {
+      "n": "04",
+      "name": "Participar",
+      "feel": "\"Eu faço parte disso\"",
+      "fmt": "Missão pro Time Fernanda",
+      "sig": "Compartilhamentos e cadastros"
+    },
+    "anti": {
+      "n": "×",
+      "name": "Anti-exemplo",
+      "feel": "O que parar de fazer",
+      "fmt": "Print de tweet com recorte de TV",
+      "sig": "Quase ninguém comenta"
+    }
+  },
+  "roteiros": [
+    {
+      "id": "conhecer",
+      "name": "Conhecer",
+      "title": "Política dentro da vida",
+      "dur": "30s",
+      "where": "Selfie, fora do gabinete",
+      "beats": [
+        [
+          "0 a 3s",
+          "Cena do dia a dia, sem política: \"[momento real do dia dela], antes de mais um dia em Brasília.\""
+        ],
+        [
+          "3 a 20s",
+          "A pauta entra natural: \"E hoje a pauta é [pauta do dia], que mexe com [quem é afetado] assim: [uma frase concreta].\""
+        ],
+        [
+          "20 a 30s",
+          "Fecho com uma frase pessoal, sem slogan."
+        ]
+      ]
+    },
+    {
+      "id": "confiar",
+      "name": "Confiar",
+      "title": "Conquista: revogação da Lei de Alienação Parental",
+      "dur": "45s",
+      "where": "Selfie ou corredor da Câmara",
+      "beats": [
+        [
+          "0 a 3s",
+          "\"Tem mãe no Brasil perdendo a guarda do filho por denunciar abuso. Eu escrevi uma lei pra acabar com isso.\""
+        ],
+        [
+          "3 a 25s",
+          "O que a lei atual permite, em uma frase de vida real, sem juridiquês."
+        ],
+        [
+          "25 a 35s",
+          "O conflito: \"Agora o Carlos Jordy entrou com um recurso pra atrasar.\""
+        ],
+        [
+          "35 a 45s",
+          "O pedido: uma ação concreta pro Time Fernanda."
+        ]
+      ]
+    },
+    {
+      "id": "conversar",
+      "name": "Conversar",
+      "title": "React com o rosto, no lugar do print",
+      "dur": "60s",
+      "where": "Casa, manchete pequena num canto",
+      "beats": [
+        [
+          "Tela",
+          "A manchete pequena num canto e ela em primeiro plano."
+        ],
+        [
+          "0 a 5s",
+          "A reação dela em uma frase, como falaria pra uma amiga."
+        ],
+        [
+          "5 a 50s",
+          "Por que isso importa pra quem está assistindo, em até três frases."
+        ],
+        [
+          "50 a 60s",
+          "Uma pergunta que ela mesma vai responder no próximo vídeo. Nunca \"comenta aí\" vazio."
+        ]
+      ]
+    },
+    {
+      "id": "participar",
+      "name": "Participar",
+      "title": "Missão: fim da escala 6x1",
+      "dur": "40s",
+      "where": "Selfie, carro ou rua",
+      "beats": [
+        [
+          "0 a 3s",
+          "\"Se tu trabalha seis dias e folga um, esse vídeo é pra ti.\""
+        ],
+        [
+          "3 a 20s",
+          "O que está em jogo, em uma frase."
+        ],
+        [
+          "20 a 35s",
+          "A missão: \"Manda esse vídeo pra uma pessoa que trabalha na 6x1. Só uma.\""
+        ],
+        [
+          "35 a 40s",
+          "\"Quem faz isso é Time Fernanda.\""
+        ]
+      ]
+    },
+    {
+      "id": "tres",
+      "name": "Uma pauta, três redes",
+      "title": "Escala 6x1 no mesmo dia",
+      "dur": "1 dia",
+      "where": "X, TikTok e Instagram",
+      "beats": [
+        [
+          "Manhã · X",
+          "Uma frase só: \"Quem defende a 6x1 nunca trabalhou nela.\""
+        ],
+        [
+          "Tarde · TikTok",
+          "O corte de 30 a 60s do momento em que ela emparedou quem defende indenização pras empresas, com legenda e gancho nos 2 primeiros segundos."
+        ],
+        [
+          "Noite · Instagram",
+          "Selfie contando como foi o dia, o que muda pra quem trabalha seis por um, e a missão do Time Fernanda."
+        ],
+        [
+          "Dia seguinte",
+          "Um vídeo respondendo o melhor comentário, de apoio ou de dúvida."
+        ]
+      ]
+    }
+  ],
+  "checklist": [
+    "Eu sei qual degrau este post serve",
+    "A Fernanda aparece falando nos primeiros 2 segundos",
+    "O gancho está falado e escrito na tela",
+    "A legenda do TikTok tem até 150 caracteres",
+    "O post ataca uma ideia ou um político, nunca o eleitor",
+    "Termina com missão, pergunta que ela vai responder ou frase pessoal, e nunca com \"seguimos a luta\" por padrão"
+  ],
+  "regras": [
+    [
+      "Aparecer falando, com o rosto na frente da pauta",
+      "Print de tweet ou recorte de TV sem ela no vídeo"
+    ],
+    [
+      "Contar a conquista com antes e depois",
+      "\"Seguimos a luta\" como fecho padrão"
+    ],
+    [
+      "Atacar a ideia e o político",
+      "Xingar o eleitor ou usar termos como \"pobre de direita\""
+    ],
+    [
+      "Falar do futuro que a pauta constrói",
+      "Viver só do \"URGENTE\" e do \"BOMBA\""
+    ],
+    [
+      "Postar menos, cada vídeo feito pra sua rede",
+      "Volume alto com o mesmo vídeo em todo lugar"
+    ],
+    [
+      "Responder comentário, rir de si mesma, deixar a internet brincar",
+      "Tom de nota oficial e legenda de 300 caracteres no TikTok"
+    ],
+    [
+      "Dar ao seguidor uma missão concreta",
+      "\"Comenta aí\" e \"compartilha\" sem motivo"
+    ]
+  ],
+  "perguntas": [
+    [
+      "Um motorista de aplicativo que votou no Bolsonaro te diz que \"a esquerda só fala de pauta identitária e esqueceu o trabalhador\". O que tu responde?",
+      "Acolher sem ceder, e falar de vida concreta"
+    ],
+    [
+      "Uma mãe evangélica te pergunta por que deveria confiar no PSOL. O que tu responde?",
+      "Falar com quem está fora da bolha sem superioridade moral"
+    ],
+    [
+      "Alguém diz que tu \"só briga e não aprova nada\". Qual é a resposta, com um exemplo concreto?",
+      "Transformar o confronto em entrega"
+    ],
+    [
+      "Qual pauta tu defenderia mesmo sabendo que vai perder seguidores?",
+      "O que é inegociável e dá coerência ao perfil"
+    ],
+    [
+      "Em que tu já mudou de opinião nos últimos anos?",
+      "Mudar com honestidade gera mais confiança que nunca errar"
+    ],
+    [
+      "Explica a escala 6x1 pra uma pessoa de 16 anos, em uma frase.",
+      "Simplicidade"
+    ],
+    [
+      "Qual futuro tu promete pra quem tem 20 anos hoje, em uma frase?",
+      "Falar de futuro, não só de passado"
+    ]
+  ]
+}

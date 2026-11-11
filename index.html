@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fernanda nas Redes</title>
+<meta name="description" content="Guia de referência da equipe da deputada Fernanda Melchionna: relação com o público nas redes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="top" aria-label="Seções"><div class="wrap">
+  <span class="brand">Fernanda nas Redes</span>
+  <a href="#diagnostico">Diagnóstico</a><a href="#escada">Escada</a><a href="#videos">Vídeos</a><a href="#benchmarks">Benchmarks</a><a href="#roteiros">Roteiros</a><a href="#producao">Produção</a><a href="#regras">Regras</a><a href="#perguntas">Perguntas</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Manual de relação com o público · <span id="updated">dados de 11/nov/2026</span></div>
+  <h1>As pessoas já gostam da Fernanda. Falta espaço pra ela <em>ser ela</em>.</h1>
+  <p class="lead">Este é o guia de referência da equipe: o diagnóstico com dados, vídeos reais pra copiar, roteiros prontos e o jeito de gravar. Tudo parte de um número: quando ela aparece falando, o público conversa.</p>
+  <div class="kpis">
+    <div class="kpi"><b>6,5 <span class="vs">vs</span> 0,2</b><span>comentários a cada 100 plays: selfie dela contra print de tweet, no Instagram</span></div>
+    <div class="kpi"><b>~1%</b><span>dos seguidores do TikTok assistem um vídeo típico dela. Na Ana Elisa, ~32%</span></div>
+    <div class="kpi"><b>1,9 mil <span class="vs">vs</span> 103</b><span>vídeos no TikTok: Fernanda contra Ana Elisa, que tem 6x mais seguidores lá</span></div>
+  </div>
+</div></header>
+
+<section id="diagnostico"><div class="wrap stack">
+  <div><div class="eyebrow">01 · Diagnóstico</div><h2>O problema é distribuição, não afinidade</h2>
+  <p class="lead">Nos reels em que ela aparece falando, o público comenta quase 9 vezes mais. O print alcança, mas ninguém conversa com um print.</p></div>
+  <div class="chart"><div id="chart"></div><p class="src">Fonte: perfil público @fernandapsol no Instagram, 9 reels não fixados de 7 a 11/nov/2026, coletados via vidIQ.</p></div>
+  <div class="finds">
+    <div class="find"><b>O confronto é o maior alcance, e aparece pouco</b><p>Nikolas (3M de plays), Bolsonaro (2,9M) e escala 6x1 (109 mil no TikTok). Hoje é acerto ocasional, não linha editorial.</p></div>
+    <div class="find"><b>O formato mais postado é o que menos conversa</b><p>No TikTok, os prints de tweet ficam entre 596 e 23 mil views.</p></div>
+    <div class="find"><b>O mesmo vídeo vai igual pras duas redes</b><p>Com o Fabio Porchat: 57,3 mil plays no Instagram, 2,9 mil no TikTok, com a mesma legenda longa.</p></div>
+    <div class="find"><b>As conquistas ficam escondidas</b><p>O projeto que revoga a LAP é dela, e o vídeo teve 1,1 mil views no TikTok, contado como "seguimos a luta".</p></div>
+  </div>
+</div></section>
+
+<section id="escada"><div class="wrap stack">
+  <div><div class="eyebrow">02 · A escada de relação</div><h2>Cada post serve a um degrau</h2>
+  <p class="lead">Clica num degrau pra ver os vídeos de referência dele. O confronto continua, mas como porta de entrada que traz gente nova pro degrau 1.</p></div>
+  <div class="ladder" id="ladder"></div>
+</div></section>
+
+<section id="videos"><div class="wrap stack">
+  <div><div class="eyebrow">03 · Vídeos de referência</div><h2>Exemplos pra assistir e copiar</h2>
+  <p class="lead">Clica em "Assistir aqui" pra tocar o vídeo na página, ou abre o original. Os números são da coleta de 11/nov/2026, e a taxa de conversa é comentários a cada 100 views.</p></div>
+  <div class="bar" id="filters"></div>
+  <div class="bar"><label for="sort" style="font-size:13px;color:var(--muted)">Ordenar por</label>
+    <select id="sort"><option value="conv">Mais conversa</option><option value="views">Mais views</option><option value="deg">Degrau</option></select>
+    <span id="count" style="font-size:13px;color:var(--muted)"></span></div>
+  <div class="grid" id="gallery"></div>
+</div></section>
+
+<section id="benchmarks"><div class="wrap stack">
+  <div><div class="eyebrow">04 · Benchmarks</div><h2>Quem ensina o quê</h2>
+  <p class="lead">Os números do Janones e da Ana Elisa são de um período eleitoral, então servem pra mostrar o padrão, não como meta de volume. Clica no cabeçalho pra ordenar.</p></div>
+  <div class="tablewrap"><table id="bench"><thead></thead><tbody></tbody></table></div>
+  <p class="src">O Cortez joga no X, onde as métricas por post não foram coletadas, então o caso dele é de postura e tom.</p>
+</div></section>
+
+<section id="roteiros"><div class="wrap stack">
+  <div><div class="eyebrow">05 · Roteiros prontos</div><h2>Pautas reais, segundo a segundo</h2>
+  <p class="lead">O que está entre colchetes a equipe preenche com as respostas da Fernanda. Copia e leva pra gravação.</p></div>
+  <div class="tabs" id="stabs"></div>
+  <div id="script"></div>
+</div></section>
+
+<section id="producao"><div class="wrap stack">
+  <div><div class="eyebrow">06 · Produção</div><h2>Celular, rosto, voz limpa e legenda</h2>
+  <p class="lead">Nenhum vídeo que funciona aqui depende de produção cara. As marcas <span class="seen">visto nos dados</span> indicam o que aparece nos vídeos coletados, e o resto é prática de mercado.</p></div>
+  <div class="cols">
+    <div class="box"><h3>Kit mínimo</h3><ul>
+      <li>Microfone de lapela sem fio. O Janones usa lapela visível na maioria dos vídeos <span class="seen">visto nos dados</span></li>
+      <li>Celular na vertical, 9:16, sempre</li>
+      <li>Tripé de mesa ou de carro. O carro e a casa são os cenários das selfies que funcionam <span class="seen">visto nos dados</span></li></ul></div>
+    <div class="box"><h3>Na gravação</h3><ul>
+      <li>Olhos no terço de cima, celular na altura dos olhos</li>
+      <li>Luz de frente: janela ou luz de anel. Nada de contraluz</li>
+      <li>Cenário que diz onde ela está: corredor da Câmara, carro, cozinha, rua</li>
+      <li>A primeira frase já é o gancho, sem "oi, gente, tudo bem?"</li>
+      <li>Fala como pra uma amiga. Cola de 3 tópicos, nunca texto lido</li>
+      <li>Grava em bloco: 3 selfies em 30 minutos, trocando blusa ou cenário</li></ul></div>
+    <div class="box"><h3>Na edição</h3><ul>
+      <li>Corta pausas e respiros. O ritmo vem do corte</li>
+      <li>Legenda queimada o vídeo inteiro. Ela já faz isso nas selfies <span class="seen">visto nos dados</span></li>
+      <li>Texto grande nos 2 primeiros segundos, repetindo o gancho</li>
+      <li>Capa com o rosto dela e até 5 palavras dizendo quem ou o quê</li>
+      <li>Manchete ou print só como elemento pequeno num canto <span class="seen">visto nos dados</span></li></ul></div>
+  </div>
+  <div class="box"><h3>Duração por degrau</h3><div class="tablewrap" style="border:0"><table style="min-width:520px"><thead><tr><th>Degrau</th><th>Duração</th><th>Por quê</th></tr></thead><tbody>
+    <tr><td>Porta de entrada</td><td class="num">30 a 90s</td><td>Só o momento do embate</td></tr>
+    <tr><td>Conhecer</td><td class="num">10 a 40s</td><td>Uma cena, uma ideia. Os Shorts do Luide têm de 10 a 60s</td></tr>
+    <tr><td>Confiar</td><td class="num">40 a 60s</td><td>Antes, o que ela fez, depois</td></tr>
+    <tr><td>Conversar</td><td class="num">1 a 5min</td><td>Conversa longa funciona quando é opinião. Os da Ana Elisa têm de 2 a 6min</td></tr>
+    <tr><td>Participar</td><td class="num">20 a 45s</td><td>Missão clara e rápida</td></tr></tbody></table></div></div>
+  <div class="stack" style="gap:10px"><h3>Rotina semanal sugerida, 5 posts no TikTok</h3>
+    <div class="week">
+      <div class="day entrada"><span class="d">SEG</span><strong>Porta de entrada</strong><span>Corte do confronto da semana</span></div>
+      <div class="day k"><span class="d">TER</span><strong>Conhecer</strong><span>Política dentro da vida</span></div>
+      <div class="day k"><span class="d">QUA</span><strong>Conversar</strong><span>Resposta a um comentário real</span></div>
+      <div class="day k"><span class="d">QUI</span><strong>Confiar</strong><span>Uma conquista contada como história</span></div>
+      <div class="day k"><span class="d">SEX</span><strong>Participar</strong><span>Missão do Time Fernanda</span></div>
+    </div>
+    <p class="src">O react com o rosto entra no dia em que a notícia acontece, no lugar do formato previsto. O Instagram recebe as mesmas pautas, com corte e legenda refeitos.</p></div>
+  <div class="box"><div class="row" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><h3>Checklist antes de postar</h3><span class="progress" id="prog"></span></div>
+    <div class="check" id="checklist"></div>
+    <button class="btn ghost" id="resetCheck" type="button">Limpar pro próximo post</button></div>
+</div></section>
+
+<section id="regras"><div class="wrap stack">
+  <div><div class="eyebrow">07 · Regras de ouro</div><h2>O que muda no dia a dia</h2></div>
+  <p class="golden">Confronta o adversário, acolhe o público. Quem votou errado não é inimigo, é alguém que ela ainda não alcançou.</p>
+  <div class="rules" id="rules"></div>
+</div></section>
+
+<section id="perguntas"><div class="wrap stack">
+  <div><div class="eyebrow">08 · Para a Fernanda</div><h2>O que só ela sabe responder</h2>
+  <p class="lead">As respostas viram roteiro. O questionário completo, com 22 perguntas, fica no doc compartilhado. Aqui tem o treino de posicionamento: responde em 3 frases, como falaria num vídeo.</p></div>
+  <div class="cta"><a class="btn" href="https://claude.ai/artifact/1xsbDD1nnMDEnytYfD2j3K#4a9ea030-2967" target="_blank" rel="noopener">Abrir o questionário completo</a><span style="font-size:13px;color:var(--muted)">Responde direto no doc, e a equipe vê na hora.</span></div>
+  <div class="qs" id="qs"></div>
+  <p class="src">O rascunho fica salvo só neste navegador. Copia a resposta e cola no doc pra equipe ver.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <p>Métricas públicas coletadas via vidIQ em 11/nov/2026. Fontes: <a href="https://www.tiktok.com/@fernandapsol" target="_blank" rel="noopener">@fernandapsol no TikTok</a>, <a href="https://www.instagram.com/fernandapsol/" target="_blank" rel="noopener">no Instagram</a>, <a href="https://www.tiktok.com/@euannaelisa" target="_blank" rel="noopener">@euannaelisa</a>, <a href="https://www.instagram.com/anaelisast/" target="_blank" rel="noopener">@anaelisast</a>, <a href="https://www.tiktok.com/@andrejanones" target="_blank" rel="noopener">@andrejanones</a>, <a href="https://www.youtube.com/@luideverso" target="_blank" rel="noopener">@luideverso</a>, <a href="https://x.com/cortezpsol" target="_blank" rel="noopener">@cortezpsol</a>. Entrevistas do Cortez: <a href="https://www.congressoemfoco.com.br/noticia/113848/extrema-direita-conquista-o-jovem-pelas-redes--diz-guilherme-cortez" target="_blank" rel="noopener">Congresso em Foco</a> e <a href="https://www.bahianoticias.com.br/folha/noticia/415095-esquerda-precisa-abandonar-discurso-de-superioridade-moral-diz-guilherme-cortez" target="_blank" rel="noopener">Folha</a>.</p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
