@@ -19,7 +19,7 @@ assets/style.css           tokens de cor/tipo, tema claro e escuro
 assets/app.js              monta tudo a partir de /data, embeds sob demanda
 assets/thumbs/*.jpg        capas dos vídeos (recortadas da coleta)
 data/videos.json           vídeos de referência: degrau, números, "o que observar"
-data/benchmarks.json       perfis comparados (Fernanda, Ana Elisa, Janones, Luide, Cortez)
+data/benchmarks.json       perfis comparados (Fernanda, Ana Elisa, Janones, Luide, Cortez, Nikolas, Gayer, Erika Hilton)
 data/content.json          degraus, roteiros, checklist, regras, perguntas
 scripts/update_metrics.py  atualiza views e comentários via yt-dlp
 .github/workflows/         roda o script toda segunda e commita se mudou

@@ -65,6 +65,33 @@
       "tot": null,
       "deg": "Participar",
       "lic": "Tom da timeline, humor, futuro, deixa a internet brincar"
+    },
+    {
+      "who": "Nikolas Ferreira (PL)",
+      "rede": "TikTok",
+      "seg": 10800000,
+      "med": 2150000,
+      "tot": 726,
+      "deg": "Conversar",
+      "lic": "Rosto na tela quase todo dia, com a manchete pequena ou um objeto na mão"
+    },
+    {
+      "who": "Gustavo Gayer (PL)",
+      "rede": "TikTok",
+      "seg": 672600,
+      "med": 42900,
+      "tot": 904,
+      "deg": "Conhecer",
+      "lic": "Os fixados com família e humor vão muito mais longe que o vídeo longo de estúdio"
+    },
+    {
+      "who": "Erika Hilton",
+      "rede": "TikTok",
+      "seg": 2900000,
+      "med": 226900,
+      "tot": 466,
+      "deg": "Confiar",
+      "lic": "Conquista anunciada como vitória, na hora e com emoção"
     }
   ]
 }
