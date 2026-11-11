@@ -1,6 +1,6 @@
 # Fernanda nas Redes
 
-Guia de referência da equipe da deputada Fernanda Melchionna (PSOL-RS) pra construir relação com o público nas redes. Site estático: HTML, CSS e JS puro, com os dados em JSON e atualização semanal das métricas via GitHub Actions.
+Guia de referência pra deputada Fernanda Melchionna (PSOL-RS) construir relação com o público nas redes. Site estático: HTML, CSS e JS puro, com os dados em JSON e atualização semanal das métricas via GitHub Actions.
 
 ## Rodar local
 
@@ -27,7 +27,7 @@ scripts/update_metrics.py  atualiza views e comentários via yt-dlp
 
 ## Editar conteúdo
 
-Tudo que a equipe muda fica em `data/`. Pra adicionar um vídeo, copia um item de `videos.json` e preenche:
+Todo o conteúdo editável fica em `data/`. Pra adicionar um vídeo, copia um item de `videos.json` e preenche:
 
 | Campo | O que é |
 | --- | --- |
@@ -35,7 +35,7 @@ Tudo que a equipe muda fica em `data/`. Pra adicionar um vídeo, copia um item d
 | `vid` | ID do vídeo na URL (o número do TikTok, o código do reel, o ID do Short). É o que liga o player |
 | `deg` | `entrada`, `conhecer`, `confiar`, `conversar`, `participar` ou `anti` |
 | `views`, `com` | Views e comentários. `null` quando não tem dado. Nunca chutar |
-| `obs` | O que a equipe deve observar no vídeo, em uma ou duas frases |
+| `obs` | O que observar no vídeo, em uma ou duas frases |
 | `thumb` | Caminho da capa em `assets/thumbs/`, ou `null` (mostra o título no lugar) |
 
 ## Vídeos tocando na página

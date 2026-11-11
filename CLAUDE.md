@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Site estático de referência pra equipe de comunicação da deputada Fernanda Melchionna (PSOL-RS). Público: a deputada e a equipe que grava e posta.
+Site estático de referência pra deputada Fernanda Melchionna (PSOL-RS). Público: a própria deputada, e a copy fala direto com ela, de "você".
 
 ## Regras do projeto
 
