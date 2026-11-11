@@ -168,7 +168,7 @@ async function main() {
 
 /* gráfico do diagnóstico: fotografia de 11/nov/2026, fixa de propósito (é a linha de base) */
 function renderChart() {
-  const rows = [['Selfie: dia de trabalho em Brasília', 1, 13900, 898], ['Seu discurso em evento', 1, 23700, 777], ['Selfie: Revoga LAP', 1, 16100, 488], ['Você com Fabio Porchat', 1, 57300, 1700], ['Recorte de discurso de outra pessoa', 0, 131000, 778], ['Print de tweet + CNN (SUS)', 0, 34500, 200], ['Print de tweet + TV (Eduardo)', 0, 102500, 413], ['Print de tweet + TV (Peña)', 0, 101800, 225], ['Meme de filmes, sem você', 0, 52400, 75]]
+  const rows = [['Selfie: dia de trabalho em Brasília', 1, 13900, 898], ['Teu discurso em evento', 1, 23700, 777], ['Selfie: Revoga LAP', 1, 16100, 488], ['Você com Fabio Porchat', 1, 57300, 1700], ['Recorte de discurso de outra pessoa', 0, 131000, 778], ['Print de tweet + CNN (SUS)', 0, 34500, 200], ['Print de tweet + TV (Eduardo)', 0, 102500, 413], ['Print de tweet + TV (Peña)', 0, 101800, 225], ['Meme de filmes, sem você', 0, 52400, 75]]
     .map(r => ({ l: r[0], f: r[1], p: r[2], c: r[3], r: r[3] / r[2] * 100 })).sort((a, b) => b.r - a.r);
   const mx = Math.max(...rows.map(r => r.r)), x0 = 270, w = 300, rh = 34, y0 = 20, H = y0 + rows.length * rh + 10;
   let s = `<svg viewBox="0 0 760 ${H}" role="img" aria-label="Comentários a cada 100 plays por reel" font-family="Inter,system-ui,sans-serif" font-size="13">`;
