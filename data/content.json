@@ -4,14 +4,14 @@
       "n": "Porta",
       "name": "Porta de entrada",
       "feel": "\"Quem é essa mulher enfrentando ele?\"",
-      "fmt": "Corte do confronto com nome conhecido",
+      "fmt": "Corte do confronto com um nome conhecido",
       "sig": "Alcance e seguidores novos"
     },
     "conhecer": {
       "n": "01",
       "name": "Conhecer",
       "feel": "\"Ela é gente como eu\"",
-      "fmt": "Política dentro da vida, bastidor",
+      "fmt": "Política dentro da vida e bastidor",
       "sig": "Alcance fora da base"
     },
     "confiar": {
@@ -25,20 +25,20 @@
       "n": "03",
       "name": "Conversar",
       "feel": "\"Ela me ouve\"",
-      "fmt": "Resposta a comentário, react com rosto",
+      "fmt": "Resposta a comentário e react com o rosto",
       "sig": "3+ comentários a cada 100 plays"
     },
     "participar": {
       "n": "04",
       "name": "Participar",
       "feel": "\"Eu faço parte disso\"",
-      "fmt": "Missão pro Time Fernanda",
+      "fmt": "Missão para o Time Fernanda",
       "sig": "Compartilhamentos e cadastros"
     },
     "anti": {
       "n": "×",
       "name": "Anti-exemplo",
-      "feel": "O que parar de fazer",
+      "feel": "O que deixar de fazer",
       "fmt": "Print de tweet com recorte de TV",
       "sig": "Quase ninguém comenta"
     }
@@ -57,11 +57,11 @@
         ],
         [
           "3 a 20s",
-          "A pauta entra natural: \"E hoje a pauta é [pauta do dia], que mexe com [quem é afetado] assim: [uma frase concreta].\""
+          "A pauta entra com naturalidade: \"E hoje a pauta é [pauta do dia], que mexe com [quem é afetado] assim: [uma frase concreta].\""
         ],
         [
           "20 a 30s",
-          "Fecho com uma frase pessoal, sem slogan."
+          "Fechamento com uma frase pessoal, sem slogan."
         ]
       ]
     },
@@ -86,7 +86,7 @@
         ],
         [
           "35 a 45s",
-          "O pedido: uma ação concreta pro Time Fernanda."
+          "O pedido: uma ação concreta para o Time Fernanda."
         ]
       ]
     },
@@ -103,11 +103,11 @@
         ],
         [
           "0 a 5s",
-          "A reação dela em uma frase, como falaria pra uma amiga."
+          "A reação dela em uma frase, como falaria com uma amiga."
         ],
         [
           "5 a 50s",
-          "Por que isso importa pra quem está assistindo, em até três frases."
+          "Por que isso importa para quem está assistindo, em até três frases."
         ],
         [
           "50 a 60s",
@@ -167,7 +167,7 @@
     }
   ],
   "checklist": [
-    "Eu sei qual degrau este post serve",
+    "Sei a qual degrau este post serve",
     "A Fernanda aparece falando nos primeiros 2 segundos",
     "O gancho está falado e escrito na tela",
     "A legenda do TikTok tem até 150 caracteres",
@@ -192,7 +192,7 @@
       "Viver só do \"URGENTE\" e do \"BOMBA\""
     ],
     [
-      "Postar menos, cada vídeo feito pra sua rede",
+      "Postar menos, com cada vídeo feito para a sua rede",
       "Volume alto com o mesmo vídeo em todo lugar"
     ],
     [

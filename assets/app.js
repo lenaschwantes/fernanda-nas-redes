@@ -19,7 +19,7 @@ function toast(t) {
 }
 async function copy(text) {
   try { await navigator.clipboard.writeText(text); toast('Copiado'); }
-  catch (e) { toast('Não deu pra copiar, seleciona o texto'); }
+  catch (e) { toast('Não foi possível copiar. Selecione o texto manualmente'); }
 }
 
 /** URL do player oficial de cada rede, ou null quando a rede não tem embed simples (X). */
@@ -160,7 +160,7 @@ async function main() {
 
   /* perguntas */
   $('#qs').innerHTML = QS.map((q, i) => `<div class="q"><strong>${esc(q[0])}</strong><span class="why">Avalia: ${esc(q[1])}</span>
-    <textarea id="qa${i}" aria-label="Resposta da pergunta ${i + 1}" placeholder="Responde em até 3 frases, como falaria no vídeo"></textarea>
+    <textarea id="qa${i}" aria-label="Resposta da pergunta ${i + 1}" placeholder="Até 3 frases, do jeito que falaria no vídeo"></textarea>
     <div class="row"><button class="btn ghost" type="button" data-i="${i}">Copiar resposta</button></div></div>`).join('');
   QS.forEach((q, i) => { const ta = $('#qa' + i); ta.value = store.get('fnr-qa' + i, ''); ta.oninput = () => store.set('fnr-qa' + i, ta.value); });
   $('#qs').querySelectorAll('button').forEach(b => b.onclick = () => { const i = +b.dataset.i; copy(QS[i][0] + '\n' + $('#qa' + i).value); });
@@ -186,5 +186,5 @@ function renderChart() {
 
 main().catch(e => {
   console.error(e);
-  $('#gallery').innerHTML = `<p class="empty">Os dados não carregaram. Abre o site por um servidor (ex.: <code>python -m http.server</code>), não direto pelo arquivo. Detalhe: ${esc(e.message)}</p>`;
+  $('#gallery').innerHTML = `<p class="empty">Os dados não carregaram. Abra o site por um servidor (por exemplo, <code>python -m http.server</code>), e não direto pelo arquivo. Detalhe: ${esc(e.message)}</p>`;
 });
