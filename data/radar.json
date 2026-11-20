@@ -1,6 +1,9 @@
 {
   "atualizado_em": "2026-11-20",
   "fonte": "Busca no X via Agent Reach, rodada na máquina da Lena",
+  "excluir_autores": [
+    "fernandapsol"
+  ],
   "termos": [
     {
       "id": "fernanda",
@@ -25,45 +28,9 @@
   ],
   "tweets": [
     {
-      "url": "https://x.com/fernandapsol/status/2123172337940115637",
-      "author": "fernandapsol",
-      "published_at": "2026-11-18T21:51:46+00:00",
-      "termo": "fernanda"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2123579366617522503",
-      "author": "fernandapsol",
-      "published_at": "2026-11-20T00:49:09+00:00",
-      "termo": "fernanda"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2122063523152789519",
-      "author": "fernandapsol",
-      "published_at": "2026-11-15T20:25:44+00:00",
-      "termo": "fernanda"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2118057421729837453",
-      "author": "fernandapsol",
-      "published_at": "2026-11-04T19:06:55+00:00",
-      "termo": "fernanda"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2111427377796669451",
-      "author": "fernandapsol",
-      "published_at": "2026-10-17T12:01:29+00:00",
-      "termo": "fernanda"
-    },
-    {
       "url": "https://x.com/martav498/status/2123818954875453501",
       "author": "martav498",
       "published_at": "2026-11-20T16:41:12+00:00",
-      "termo": "fernanda"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2115820575650140364",
-      "author": "fernandapsol",
-      "published_at": "2026-10-29T14:58:29+00:00",
       "termo": "fernanda"
     },
     {
@@ -136,12 +103,6 @@
       "url": "https://x.com/guibelarmino/status/1371157713271545858",
       "author": "guibelarmino",
       "published_at": "2021-03-14T17:54:08+00:00",
-      "termo": "lap"
-    },
-    {
-      "url": "https://x.com/fernandapsol/status/2120642896898437247",
-      "author": "fernandapsol",
-      "published_at": "2026-11-11T22:20:40+00:00",
       "termo": "lap"
     },
     {

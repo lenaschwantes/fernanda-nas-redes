@@ -83,19 +83,25 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     data = json.loads(DATA.read_text(encoding="utf-8"))
+    # contas que não entram no radar (a dela já aparece no próprio perfil)
+    skip = {a.lower() for a in data.get("excluir_autores", [])}
+    keep = lambda t: (t.get("author") or "").lower() not in skip
+    extra = "".join(f" -from:{a}" for a in data.get("excluir_autores", []))
     old = {}
     for t in data.get("tweets", []):
-        old.setdefault(t["termo"], []).append(t)
+        if keep(t):
+            old.setdefault(t["termo"], []).append(t)
     tweets, ok = [], 0
     for i, termo in enumerate(data["termos"]):
         if i:
             time.sleep(PAUSE)
         print(f"- {termo['rotulo']} ({termo['q']})")
-        got = search(termo["q"])
+        got = search(termo["q"] + extra)
         if got is None:
             tweets += old.get(termo["id"], [])
             continue
         ok += 1
+        got = [t for t in got if keep(t)]
         print(f"  {len(got)} tweets")
         tweets += [dict(t, termo=termo["id"]) for t in got]
     if not ok:
