@@ -4,7 +4,11 @@
 
 $ErrorActionPreference = 'Continue'
 $repo = Split-Path -Parent $PSScriptRoot
-$py   = Join-Path $env:APPDATA 'uv\tools\agent-reach\Scripts\python.exe'
+# O app desktop do Claude é empacotado: o que ele instala em AppData vai pra pasta virtual do pacote.
+# Fora do app (no Agendador), o Agent Reach só existe nesse caminho real.
+$py = Get-ChildItem (Join-Path $env:LOCALAPPDATA 'Packages\Claude_*\LocalCache\Roaming\uv\tools\agent-reach\Scripts\python.exe') -ErrorAction SilentlyContinue |
+      Select-Object -First 1 -ExpandProperty FullName
+if (-not $py) { $py = Join-Path $env:APPDATA 'uv\tools\agent-reach\Scripts\python.exe' }
 $dir  = Join-Path $env:LOCALAPPDATA 'fernanda-radar'
 $log  = Join-Path $dir 'radar.log'
 New-Item -ItemType Directory -Force $dir | Out-Null
@@ -14,7 +18,7 @@ function Say($msg) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  $msg" | Out-Fil
 function RunGit { $o = & git.exe @args 2>&1 | Out-String; if ($o.Trim()) { $o.Trim() | Out-File -Append -Encoding utf8 $log } }
 
 Set-Location $repo
-Say '--- início'
+Say "--- início (python: $py)"
 RunGit pull --ff-only
 if ($LASTEXITCODE -ne 0) { Say 'git pull falhou, parando'; exit 1 }
 
