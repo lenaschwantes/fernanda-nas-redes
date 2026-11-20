@@ -1,5 +1,7 @@
 {
   "atualizado_em": "2026-11-11",
+  "seguidores_em": "2026-11-11",
+  "views_tipicas": "TikTok: mediana dos 12 vídeos mais recentes não fixados, atualizada toda segunda. Outras redes: coleta de 11/nov/2026.",
   "perfis": [
     {
       "me": 1,
@@ -9,7 +11,8 @@
       "med": 2900,
       "tot": 1900,
       "deg": "Diagnóstico",
-      "lic": "Base engajada, formato que não entrega"
+      "lic": "Base engajada, formato que não entrega",
+      "handle": "fernandapsol"
     },
     {
       "me": 1,
@@ -28,7 +31,8 @@
       "med": 545200,
       "tot": 103,
       "deg": "Conversar",
-      "lic": "Reage com o rosto, posta menos, conversa longo"
+      "lic": "Reage com o rosto, posta menos, conversa longo",
+      "handle": "euannaelisa"
     },
     {
       "who": "André Janones",
@@ -37,7 +41,8 @@
       "med": 817500,
       "tot": 564,
       "deg": "Participar",
-      "lic": "Pauta concreta, urgência e o seguidor com um papel"
+      "lic": "Pauta concreta, urgência e o seguidor com um papel",
+      "handle": "andrejanones"
     },
     {
       "who": "André Janones",
@@ -73,7 +78,8 @@
       "med": 2150000,
       "tot": 726,
       "deg": "Conversar",
-      "lic": "Rosto na tela quase todo dia, com a manchete pequena ou um objeto na mão"
+      "lic": "Rosto na tela quase todo dia, com a manchete pequena ou um objeto na mão",
+      "handle": "nikolasferreiradm"
     },
     {
       "who": "Gustavo Gayer (PL)",
@@ -82,7 +88,8 @@
       "med": 42900,
       "tot": 904,
       "deg": "Conhecer",
-      "lic": "Os fixados com família e humor vão muito mais longe que o vídeo longo de estúdio"
+      "lic": "Os fixados com família e humor vão muito mais longe que o vídeo longo de estúdio",
+      "handle": "gusgayer"
     },
     {
       "who": "Erika Hilton",
@@ -91,7 +98,8 @@
       "med": 226900,
       "tot": 466,
       "deg": "Confiar",
-      "lic": "Conquista anunciada como vitória, na hora e com emoção"
+      "lic": "Conquista anunciada como vitória, na hora e com emoção",
+      "handle": "erikahiltonsp"
     }
   ]
 }

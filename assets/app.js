@@ -66,9 +66,11 @@ setupNav();
 async function main() {
   const [vids, bench, content] = await Promise.all([load('videos'), load('benchmarks'), load('content')]);
   const V = vids.videos, BENCH = bench.perfis;
+  const bd = new Date(bench.atualizado_em + 'T12:00:00');
+  if ($('#benchUpdated')) $('#benchUpdated').textContent = 'Última atualização: ' + bd.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' }) + '.';
   const { degraus: DEG, roteiros: SCRIPTS, checklist: CHECK, regras: RULES, perguntas: QS } = content;
   const d = new Date(vids.atualizado_em + 'T12:00:00');
-  $('#updated').textContent = 'dados de ' + d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
+  $('#updated').textContent = 'vídeos atualizados em ' + d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
 
   renderChart();
 
@@ -131,7 +133,7 @@ async function main() {
   renderLadder(); renderFilters(); renderGallery();
 
   /* benchmarks */
-  const cols = [['who', 'Quem'], ['rede', 'Rede'], ['seg', 'Seguidores'], ['med', 'Views típicas'], ['ratio', 'Views ÷ seguidores'], ['tot', 'Vídeos no total'], ['deg', 'Degrau'], ['lic', 'O que ensina']];
+  const cols = [['who', 'Quem'], ['rede', 'Rede'], ['seg', 'Seguidores em 11/nov'], ['med', 'Views típicas'], ['ratio', 'Views ÷ seguidores'], ['tot', 'Vídeos no total'], ['deg', 'Degrau'], ['lic', 'O que ensina']];
   BENCH.forEach(b => b.ratio = b.med && b.seg ? b.med / b.seg * 100 : null);
   let key = 'ratio', dir = -1;
   function drawBench() {

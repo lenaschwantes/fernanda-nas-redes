@@ -1,4 +1,4 @@
-"""Atualiza views e comentários de data/videos.json a partir das páginas públicas.
+"""Atualiza views e comentários de data/videos.json e as views típicas do TikTok em data/benchmarks.json.
 
 Usa yt-dlp só pra ler metadados (não baixa vídeo). TikTok e YouTube funcionam sem login.
 Instagram costuma exigir login: passe um cookies.txt em IG_COOKIES pra incluir.
@@ -20,7 +20,9 @@ from pathlib import Path
 import yt_dlp
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "videos.json"
+BENCH = DATA.parent / "benchmarks.json"
 SUPPORTED = ("TikTok", "YouTube", "Instagram")
+RECENT = 12  # vídeos recentes usados na mediana das views típicas
 
 
 def fetch(url: str, cookies: str | None) -> dict | None:
@@ -35,6 +37,42 @@ def fetch(url: str, cookies: str | None) -> dict | None:
     except Exception as e:  # rede fora, login exigido, vídeo removido
         print(f"  ! falhou: {type(e).__name__}: {str(e)[:120]}")
         return None
+
+
+def typical_views(handle: str) -> int | None:
+    """Mediana de views dos vídeos mais recentes não fixados de um perfil do TikTok."""
+    opts = {"quiet": True, "no_warnings": True, "skip_download": True, "playlistend": RECENT}
+    try:
+        with yt_dlp.YoutubeDL(opts) as ydl:
+            info = ydl.extract_info(f"https://www.tiktok.com/@{handle}", download=False)
+        views = sorted(e["view_count"] for e in (info.get("entries") or []) if e and e.get("view_count") is not None)
+    except Exception as e:
+        print(f"  ! falhou: {type(e).__name__}: {str(e)[:120]}")
+        return None
+    if len(views) < 5:  # amostra pequena demais, mantém o número anterior
+        print(f"  ! só {len(views)} vídeos lidos, mantendo o anterior")
+        return None
+    m = len(views) // 2
+    return views[m] if len(views) % 2 else round((views[m - 1] + views[m]) / 2)
+
+
+def update_benchmarks(dry_run: bool) -> int:
+    """Atualiza as views típicas dos perfis do TikTok. Seguidores ficam com a última coleta manual."""
+    bench = json.loads(BENCH.read_text(encoding="utf-8"))
+    changed = 0
+    for p in bench["perfis"]:
+        if p.get("rede") != "TikTok" or not p.get("handle"):
+            continue
+        print(f"- benchmark {p['who']} (@{p['handle']})")
+        med = typical_views(p["handle"])
+        if med is not None and med != p.get("med"):
+            print(f"  med: {p.get('med')} -> {med}")
+            p["med"] = med
+            changed += 1
+    if changed and not dry_run:
+        bench["atualizado_em"] = date.today().isoformat()
+        BENCH.write_text(json.dumps(bench, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return changed
 
 
 def main() -> None:
@@ -66,7 +104,9 @@ def main() -> None:
         data["atualizado_em"] = date.today().isoformat()
         data["fonte"] = "Métricas públicas atualizadas via yt-dlp"
         DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"\n{changed} números mudaram{' (dry-run, nada salvo)' if args.dry_run else ''}.")
+    print(f"\n{changed} números de vídeos mudaram{' (dry-run, nada salvo)' if args.dry_run else ''}.")
+    b = update_benchmarks(args.dry_run)
+    print(f"{b} views típicas mudaram nos benchmarks{' (dry-run, nada salvo)' if args.dry_run else ''}.")
 
 
 if __name__ == "__main__":
