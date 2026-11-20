@@ -212,6 +212,43 @@ function renderChart() {
     <span><i style="display:inline-block;width:10px;height:10px;background:var(--muted);opacity:.45;border-radius:2px;margin-right:6px"></i>Sem você falando</span></div>` + s + '</svg>';
 }
 
+/* radar do X: tweets por pauta, mostrados pelo embed oficial do X */
+async function radar() {
+  let R;
+  try { R = await load('radar'); } catch (e) { return; }
+  const box = $('#tweets'), terms = R.termos || [], all = R.tweets || [];
+  /* abre na primeira pauta: Todas com dezenas de tweets vira uma rolagem enorme */
+  let cur = store.get('fnr-radar', terms[0] ? terms[0].id : 'all');
+  if (cur !== 'all' && !terms.some(t => t.id === cur)) cur = 'all';
+  $('#rupdated').textContent = R.atualizado_em
+    ? 'Coleta de ' + new Date(R.atualizado_em + 'T12:00:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' }) + '. Os tweets abrem no X ao clicar.'
+    : '';
+  const label = id => (terms.find(t => t.id === id) || {}).rotulo || id;
+  const when = s => { const d = s && new Date(s); return d && !isNaN(d) ? d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short' }) : ''; };
+  function draw() {
+    const opts = [['all', 'Todas']].concat(terms.map(t => [t.id, t.rotulo]));
+    $('#rterms').innerHTML = opts.map(([k, n]) => `<button class="chip" data-k="${k}" aria-pressed="${cur === k}">${esc(n)}</button>`).join('');
+    $('#rterms').querySelectorAll('.chip').forEach(b => b.onclick = () => { cur = b.dataset.k; store.set('fnr-radar', cur); draw(); });
+    const list = all.filter(t => cur === 'all' || t.termo === cur);
+    box.innerHTML = list.length ? list.map(t => `<article class="tweet"><span class="rt">${esc(label(t.termo))}</span>
+      <blockquote class="twitter-tweet" data-lang="pt" data-dnt="true"><a href="${esc(t.url)}">Tweet de @${esc(t.author || '')}${when(t.published_at) ? ', ' + when(t.published_at) : ''}</a></blockquote></article>`).join('')
+      : `<p class="empty">${all.length ? 'Nenhum tweet dessa pauta na última coleta.' : 'A primeira coleta ainda não foi feita.'}</p>`;
+    if (window.twttr && twttr.widgets) twttr.widgets.load(box);
+  }
+  draw();
+  /* o script do X só entra quando a seção chega perto da tela */
+  const io = new IntersectionObserver(es => {
+    if (!es.some(e => e.isIntersecting)) return;
+    io.disconnect();
+    if (!all.length || document.querySelector('script[src*="platform.twitter.com"]')) return;
+    const s = document.createElement('script');
+    s.src = 'https://platform.twitter.com/widgets.js'; s.async = true; s.charset = 'utf-8';
+    document.body.appendChild(s);
+  }, { rootMargin: '600px 0px' });
+  io.observe($('#radar'));
+}
+radar();
+
 main().catch(e => {
   console.error(e);
   $('#gallery').innerHTML = `<p class="empty">Os dados não carregaram. Abra o site por um servidor (por exemplo, <code>python -m http.server</code>), e não direto pelo arquivo. Detalhe: ${esc(e.message)}</p>`;

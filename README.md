@@ -54,6 +54,18 @@ TikTok e YouTube funcionam sem login. Instagram exige login: exporta um `cookies
 
 O gráfico do diagnóstico é fixo de propósito: é a linha de base de 11/nov/2026 pra comparar depois.
 
+## Radar do X
+
+A seção 09 mostra os tweets do topo da busca do X pra cada pauta de `data/radar.json` (campo `termos`, editável). A coleta roda na máquina de quem fez login no X pelo Agent Reach, não no GitHub, e só lê: não posta, não curte, não responde.
+
+```bash
+agent-reach login twitter      # uma vez, a pessoa entra na própria conta
+"%APPDATA%/uv/tools/agent-reach/Scripts/python.exe" scripts/radar_x.py
+git add data/radar.json && git commit -m "Atualiza o radar do X" && git push
+```
+
+O script guarda link, autor e data. O site mostra cada tweet pelo embed oficial do X, carregado só quando a seção chega perto da tela. Se o X pedir login, verificação ou pausa, o script para sem salvar.
+
 ## Deploy
 
 GitHub Pages: Settings, Pages, Deploy from branch, `main`, pasta `/ (root)`. Ou Vercel/Netlify importando o repo, sem build.

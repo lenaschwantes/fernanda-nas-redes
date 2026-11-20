@@ -1,0 +1,220 @@
+{
+  "atualizado_em": "2026-11-20",
+  "fonte": "Busca no X via Agent Reach, rodada na máquina da Lena",
+  "termos": [
+    {
+      "id": "fernanda",
+      "q": "Fernanda Melchionna",
+      "rotulo": "Fernanda Melchionna"
+    },
+    {
+      "id": "6x1",
+      "q": "escala 6x1",
+      "rotulo": "Escala 6x1"
+    },
+    {
+      "id": "lap",
+      "q": "alienação parental",
+      "rotulo": "Alienação parental"
+    },
+    {
+      "id": "psol",
+      "q": "PSOL",
+      "rotulo": "PSOL"
+    }
+  ],
+  "tweets": [
+    {
+      "url": "https://x.com/fernandapsol/status/2123579366617522503",
+      "author": "fernandapsol",
+      "published_at": "2026-11-20T00:49:09+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/fernandapsol/status/2123172337940115637",
+      "author": "fernandapsol",
+      "published_at": "2026-11-18T21:51:46+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/plantaobrasil1/status/2122761466080108801",
+      "author": "plantaobrasil1",
+      "published_at": "2026-11-17T18:39:07+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/fernandapsol/status/2122063523152789519",
+      "author": "fernandapsol",
+      "published_at": "2026-11-15T20:25:44+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/samiabomfim/status/2115946898896892210",
+      "author": "samiabomfim",
+      "published_at": "2026-10-29T23:20:27+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/fernandapsol/status/2118057421729837453",
+      "author": "fernandapsol",
+      "published_at": "2026-11-04T19:06:55+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/fernandapsol/status/2115820575650140364",
+      "author": "fernandapsol",
+      "published_at": "2026-10-29T14:58:29+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/revistaforum/status/2123516409858949512",
+      "author": "revistaforum",
+      "published_at": "2026-11-19T20:38:59+00:00",
+      "termo": "fernanda"
+    },
+    {
+      "url": "https://x.com/ErikakHilton/status/2123450136038674898",
+      "author": "ErikakHilton",
+      "published_at": "2026-11-19T16:15:38+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/ErikakHilton/status/2121995572248744292",
+      "author": "ErikakHilton",
+      "published_at": "2026-11-15T15:55:43+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/ptbrasil/status/2123431856750071907",
+      "author": "ptbrasil",
+      "published_at": "2026-11-19T15:03:00+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/senadorhumberto/status/2123739577298911327",
+      "author": "senadorhumberto",
+      "published_at": "2026-11-20T11:25:47+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/LulaOficial/status/2123478723500367919",
+      "author": "LulaOficial",
+      "published_at": "2026-11-19T18:09:14+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/canalgov/status/2123422190259622346",
+      "author": "canalgov",
+      "published_at": "2026-11-19T14:24:36+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/rickazzevedo/status/2123796395727487479",
+      "author": "rickazzevedo",
+      "published_at": "2026-11-20T15:11:33+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/lazarorosa25/status/2123408445290287592",
+      "author": "lazarorosa25",
+      "published_at": "2026-11-19T13:29:59+00:00",
+      "termo": "6x1"
+    },
+    {
+      "url": "https://x.com/mariadorosario/status/2120641615878660319",
+      "author": "mariadorosario",
+      "published_at": "2026-11-11T22:15:35+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/dicasdered/status/1627739718904344576",
+      "author": "dicasdered",
+      "published_at": "2023-02-20T18:39:25+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/guibelarmino/status/1371157713271545858",
+      "author": "guibelarmino",
+      "published_at": "2021-03-14T17:54:08+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/fernandapsol/status/2120642896898437247",
+      "author": "fernandapsol",
+      "published_at": "2026-11-11T22:20:40+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/orlandosilva/status/1996619471868526765",
+      "author": "orlandosilva",
+      "published_at": "2025-12-04T16:35:52+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/camaradeputados/status/2123391286640046471",
+      "author": "camaradeputados",
+      "published_at": "2026-11-19T12:21:48+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/mariadorosario/status/2117747243146985695",
+      "author": "mariadorosario",
+      "published_at": "2026-11-03T22:34:23+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/rosana/status/1730548108356886550",
+      "author": "rosana",
+      "published_at": "2023-12-01T11:23:15+00:00",
+      "termo": "lap"
+    },
+    {
+      "url": "https://x.com/psolnacamara/status/2115783212907577601",
+      "author": "psolnacamara",
+      "published_at": "2026-10-29T12:30:01+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/xbzpapi/status/2122835113629118868",
+      "author": "xbzpapi",
+      "published_at": "2026-11-17T23:31:46+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/CassioGabrielx/status/2122666733412483082",
+      "author": "CassioGabrielx",
+      "published_at": "2026-11-17T12:22:41+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/psolnacamara/status/2120853650650075568",
+      "author": "psolnacamara",
+      "published_at": "2026-11-12T12:18:08+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/xbzpapi/status/2122801500334285129",
+      "author": "xbzpapi",
+      "published_at": "2026-11-17T21:18:12+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/dois_victorr/status/2123603717169570237",
+      "author": "dois_victorr",
+      "published_at": "2026-11-20T02:25:55+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/samiabomfim/status/2122787922915316190",
+      "author": "samiabomfim",
+      "published_at": "2026-11-17T20:24:14+00:00",
+      "termo": "psol"
+    },
+    {
+      "url": "https://x.com/brasil247/status/2123105101589975139",
+      "author": "brasil247",
+      "published_at": "2026-11-18T17:24:36+00:00",
+      "termo": "psol"
+    }
+  ]
+}
