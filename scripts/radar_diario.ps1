@@ -11,11 +11,11 @@ New-Item -ItemType Directory -Force $dir | Out-Null
 $env:PYTHONIOENCODING = 'utf-8'
 
 function Say($msg) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  $msg" | Out-File -Append -Encoding utf8 $log }
-function Git { $o = & git @args 2>&1 | Out-String; if ($o.Trim()) { $o.Trim() | Out-File -Append -Encoding utf8 $log } }
+function RunGit { $o = & git.exe @args 2>&1 | Out-String; if ($o.Trim()) { $o.Trim() | Out-File -Append -Encoding utf8 $log } }
 
 Set-Location $repo
 Say '--- início'
-Git pull --ff-only
+RunGit pull --ff-only
 if ($LASTEXITCODE -ne 0) { Say 'git pull falhou, parando'; exit 1 }
 
 # Start-Process -Wait espera também os processos filhos do Python do uv
@@ -26,10 +26,10 @@ Get-Content $out, $err -Encoding UTF8 | Where-Object { $_ -match '\S' -and $_ -n
   Out-File -Append -Encoding utf8 $log
 if ($p.ExitCode -ne 0) { Say "coleta falhou (saída $($p.ExitCode)), nada publicado"; exit 1 }
 
-git add data/radar.json
-git diff --cached --quiet
+RunGit add data/radar.json
+RunGit diff --cached --quiet
 if ($LASTEXITCODE -eq 0) { Say 'nada mudou'; exit 0 }
-Git commit -q -m 'Atualiza o radar do X'
-Git push -q
+RunGit commit -q -m 'Atualiza o radar do X'
+RunGit push -q
 if ($LASTEXITCODE -ne 0) { Say 'git push falhou'; exit 1 }
 Say 'publicado'
