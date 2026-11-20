@@ -236,3 +236,16 @@ html{scroll-padding-top:56px}
 .tweet .rt{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .tweet .twitter-tweet{margin:0!important}
 .tweet blockquote.twitter-tweet{font-family:var(--f-read);font-size:15px;padding:14px 0;border-bottom:1px solid var(--line)}
+
+/* busca livre no X */
+.xsearch{display:grid;gap:8px;border-top:2px solid var(--ink);padding-top:14px}
+.xsearch label{font-family:var(--f-display);font-stretch:75%;font-size:20px;font-weight:700}
+.xrow{display:flex;gap:8px;flex-wrap:wrap}
+.xrow input{flex:1 1 260px;min-height:44px;box-sizing:border-box;font-family:var(--f-read);font-size:17px;padding:8px 12px;border:1px solid var(--ink);border-radius:var(--r);background:var(--surface);color:var(--ink)}
+.xrow input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.xrow .btn{min-height:44px}
+.xq{display:inline-flex;align-items:center}
+.xq .chip{border-top-right-radius:0;border-bottom-right-radius:0}
+.xdel{all:unset;cursor:pointer;box-sizing:border-box;min-width:30px;padding:7px 8px;border:1px solid var(--line);border-left:0;border-radius:0 var(--r) var(--r) 0;color:var(--muted);text-align:center}
+.xdel:hover,.xdel:focus-visible{color:var(--accent);border-color:var(--ink)}
+.rhead{margin-top:12px;border-top:2px solid var(--ink);padding-top:14px}

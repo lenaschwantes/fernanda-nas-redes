@@ -249,6 +249,27 @@ async function radar() {
 }
 radar();
 
+/* busca livre no X: abre a busca ao vivo numa aba nova e guarda as últimas palavras */
+function xsearch() {
+  const f = $('#xsearch'); if (!f) return;
+  const open = q => window.open('https://x.com/search?q=' + encodeURIComponent(q) + '&f=live', '_blank', 'noopener');
+  function recent() {
+    const list = store.get('fnr-xq', []);
+    $('#xrecent').innerHTML = list.map((q, i) => `<span class="xq"><button class="chip" type="button" data-i="${i}">${esc(q)}</button><button class="xdel" type="button" data-d="${i}" aria-label="Tirar ${esc(q)} da lista">×</button></span>`).join('');
+    $('#xrecent').querySelectorAll('[data-i]').forEach(b => b.onclick = () => open(list[+b.dataset.i]));
+    $('#xrecent').querySelectorAll('[data-d]').forEach(b => b.onclick = () => { list.splice(+b.dataset.d, 1); store.set('fnr-xq', list); recent(); });
+  }
+  f.onsubmit = e => {
+    e.preventDefault();
+    const q = $('#xq').value.trim(); if (!q) return;
+    open(q);
+    store.set('fnr-xq', [q].concat(store.get('fnr-xq', []).filter(x => x.toLowerCase() !== q.toLowerCase())).slice(0, 8));
+    $('#xq').value = ''; recent();
+  };
+  recent();
+}
+xsearch();
+
 main().catch(e => {
   console.error(e);
   $('#gallery').innerHTML = `<p class="empty">Os dados não carregaram. Abra o site por um servidor (por exemplo, <code>python -m http.server</code>), e não direto pelo arquivo. Detalhe: ${esc(e.message)}</p>`;
